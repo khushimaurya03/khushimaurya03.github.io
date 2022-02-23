@@ -24,6 +24,10 @@ function div(){
 }
 
 
+function resetit() {
+  document.getElementById("form").reset();
+}
+
 
 
 function hello(){
