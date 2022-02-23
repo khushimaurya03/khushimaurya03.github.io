@@ -1,100 +1,52 @@
-var stremployees="";
 var stremployeetable="";
 
 
 
 
-function Oddemployee(){
-	stremployeetable='<table class="table table-striped table-bordered table-hover table-sm ">';
-	stremployeetable=stremployeetable+'<caption><b>List of Odd Employees</b></caption>';
+function details(number){
 	
-	
+	stremployeetable='<table width="100%"class="table table-striped table-bordered table-hover table-sm">';
 	stremployeetable=stremployeetable+'<thead class="thead-dark">';
 	
-		
-	stremployeetable=stremployeetable+'<tr><th scope="col">#</th><th scope="col">EmpID</th><th scope="col">First</th><th scope="col">City</tr>';
-	
-	stremployeetable=stremployeetable+'</thead>';
-	
-	stremployeetable=stremployeetable+'<tbody>';
-	var empID=100;
-	for(let i=0;i<employeeData.length;i++){
-		if (i%2==0){
-		
-	stremployeetable=stremployeetable+'<tr><th scope="row">'+(i+1)+'</th><td>'+ (empID+1+i)+'</td><td>'+employeeData[i].First+'</td> <td>'+employeeData[i].City+'</td></tr>';
-	}}
-	stremployeetable=stremployeetable+'</tbody>';
-	stremployeetable=stremployeetable+'</table>';
-	
-	
-
-
-document.getElementById("demo").innerHTML=stremployeetable;
-	
-	}
-
-
-function Evenemployee(){
-	stremployeetable='<table class="table table-striped table-bordered table-hover table-sm ">';
-	stremployeetable=stremployeetable+'<caption><b>List of Even Employees</b></caption>';
-	
-	
-	stremployeetable=stremployeetable+'<thead class="thead-dark">';
-	
-		
-	stremployeetable=stremployeetable+'<tr><th scope="col">#</th><th scope="col">EmpID</th><th scope="col">First</th><th scope="col">City</tr>';
-	
-	stremployeetable=stremployeetable+'</thead>';
-	
-	stremployeetable=stremployeetable+'<tbody>';
-	var empID=100;
-	for(let i=0;i<employeeData.length;i++){
-		if (i%2!=0){
-		
-	stremployeetable=stremployeetable+'<tr><th scope="row">'+(i+1)+'</th><td>'+ (empID+1+i)+'</td><td>'+employeeData[i].First+'</td> <td>'+employeeData[i].City+'</td></tr>';
-	}}
-	stremployeetable=stremployeetable+'</tbody>';
-	stremployeetable=stremployeetable+'</table>';
-	
-	
-
-
-document.getElementById("demo").innerHTML=stremployeetable;
-	
-	}
-
-
-
-function displaydata(){
-	
-	
-	
-	stremployeetable='<table width="100%"class="table table-striped table-bordered table-hover table-sm " style="border-spacing:100px;">';
-	stremployeetable=stremployeetable+'<caption><b>List of Employees</b></caption>';
-	
-	
-	stremployeetable=stremployeetable+'<thead class="thead-dark">';
-	
-		
 	stremployeetable=stremployeetable+'<tr><th scope="col">#</th><th scope="col">EmpID</th><th scope="col">First</th><th scope="col">City</th><th scope="col">Location</tr>';
 	
 	stremployeetable=stremployeetable+'</thead>';
 	
 	stremployeetable=stremployeetable+'<tbody>';
 	var empID=100;
-	for(let i=0;i<employeeData.length;i++){
-		
-	stremployeetable=stremployeetable+'<tr><th scope="row">'+(i+1)+'</th><td>'+ (empID+1+i)+'</td><td>'+employeeData[i].First+'</td> <td>'+employeeData[i].City+'</td><td>'+employeeData[i].Location+'</td></tr>';
+	
+	
+	for(i=0;i<employeeData.length;i++){
+		if(number==0){
+	
+			stremployeetable=stremployeetable+'<tr><th scope="row">'+(i+1)+'</th><td>'+ (empID+1+i)+'</td><td>'+employeeData[i].First+'</td> <td>'+employeeData[i].City+'</td><td>'+employeeData[i].Location+'</td></tr>';
+		}
+		else if(number==1){
+			if(i%2==0){
+				stremployeetable=stremployeetable+'<tr><th scope="row">'+(i+1)+'</th><td>'+ (empID+1+i)+'</td><td>'+employeeData[i].First+'</td> <td>'+employeeData[i].City+'</td><td>'+employeeData[i].Location+'</td></tr>';
+			}
+		}
+		else if(number==2){
+			if(i%2!=0){
+				stremployeetable=stremployeetable+'<tr><th scope="row">'+(i+1)+'</th><td>'+ (empID+1+i)+'</td><td>'+employeeData[i].First+'</td> <td>'+employeeData[i].City+'</td><td>'+employeeData[i].Location+'</td></tr>';
+			}
+		}
 	}
+		if(number==3){
+			var searchdata = parseInt(document.getElementById('form').value); 
+			searchdata=searchdata-101;
+			stremployeetable=stremployeetable+'<b><tr><th scope="row">'+(searchdata+1)+'</th><td>'+ (empID+searchdata+1)+'</td><td>'+employeeData[searchdata].First+'</td> <td>'+employeeData[searchdata].City+'</td><td>'+employeeData[searchdata].Location+'</td></tr></b>';
+		}
+	
+	
 	stremployeetable=stremployeetable+'</tbody>';
 	stremployeetable=stremployeetable+'</table>';
 	
-	
-
-
 document.getElementById("demo").innerHTML=stremployeetable;
-
 }
+
+
+
 function hidedata(){
 	document.getElementById("demo").innerHTML="";
 }

@@ -13,9 +13,10 @@ div{
   margin-bottom: 20px;
   margin-right: 45px;
   margin-left: 70px;
-  align:center;
+  
  
 }
+
 
 
 </style>
@@ -26,13 +27,22 @@ div{
 <form id="form">
 
 <h2> Calculator</h2>
-<label for="num1">number1</label>
+<div class="buttons">
 <input id ="num1" type ="number"></input><br>
-<label for="num2">number2</label>
-<input id ="num2" type ="number"></input><br>
 
-<label for="num3">RESULT</label>
-<input id ="num3" type ="text"></input><br>
+
+<button type="button" id="one" class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue()">1</button>
+<button type="button" id class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue()">2</button>
+<button type="button" class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue()">3</button><br>
+
+<button type="button" class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue()">4</button>
+<button type="button" class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue()">5</button>
+<button type="button" class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue()">6</button><br>
+<button type="button" class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue)">7</button>
+<button type="button" class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue()">8</button>
+<button type="button" class="shadow p-3 mb-5 bg-white rounded" onclick ="getValue()">9</button><br>
+
+
 
 <button type="button" class="shadow-lg p-3 mb-5 bg-white rounded" onclick ="add()">+</button>
 
@@ -45,7 +55,7 @@ div{
 <button type="button" class="shadow-lg p-3 mb-5 bg-white rounded" onclick ="div()">/</button>
 
 <input class="btn btn-primary"  type="button" onclick="resetit()" value="Reset"></input>
-
+</div>
 </form>
 
 

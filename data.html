@@ -8,22 +8,44 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="data.js"></script></head>
 
+<style>
+div {
+ 
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 15px;
+  margin-left: 10px;
+  
+ 
+}
+#odd:hover, #even:hover, #show:hover, #hide:hover{
+	
+	color:#9197C7;
+	 
+
+}
+
+
+
+
+
+
+</style>
+
 <body>
-<div class="container"></div>
-<h3>Displaying names and places</h3>
+<div class="container">
+
+<h3 style="background-color:91B2C7;">Displaying names and places</h3>
+
+<input type="search" id="form" placeholder="enter employee num" ></input><button type="submit" title ="click on it" id ="search"  onclick="details(3)">Click for search</button><br><br>
 
 
-<input type="search" id="form" class="form-control" placeholder="enter employee number" aria-label="Search" ></input>
-<br>
-
-<button type="submit" title ="click on it" id ="search" class="btn btn-warning" onclick="Searchemployee()">Search for Employee details</button>
+<button type="submit" id ="odd" class="shadow-lg p-3 mb-5 bg-white rounded" title ="click on it" onclick="details(1)"><b>Display Odd Employee details</b></button>
+<button type="submit" id ="even" title ="click on it"  class="shadow-lg p-3 mb-5 bg-white rounded" onclick="details(2)"><b>Display Even Employee details</b></button><br>
 
 
-<button type="submit" id ="odd" class="btn btn-outline-secondary" onclick="Oddemployee()">Display Odd Employee details</button>
-<button type="submit" id ="even" class="btn btn-success" onclick="Evenemployee()">Display Even Employee details</button>
-
-<button type="submit" id ="show" class="btn btn-outline-primary" onclick="displaydata()">Display all Employee Data</button>
-<button type="submit" id ="hide" class="btn btn-outline-secondary" onclick="hidedata()">Hide Data</button>
+<button type="submit" id ="show" title ="click on it" class="shadow-lg p-3 mb-5 bg-white rounded"onclick="details(0)"><b>Display all Employee Data</b></button>
+<button type="submit" id ="hide" title ="click on it" class="shadow-lg p-3 mb-5 bg-white rounded" onclick="hidedata()"><b>Hide Data</b></button>
 
 
 <p id ="demo"></p>
