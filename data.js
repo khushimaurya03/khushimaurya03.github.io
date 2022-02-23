@@ -2,15 +2,6 @@ var stremployees="";
 var stremployeetable="";
 
 
-function search1(){​​
-var res="";
-var searchdata = parseInt(document.getElementById('form').value);
-searchdata=searchdata-101;
-res=res+"Name:"+employeeData[searchdata].First+"<br>Place:"+employeeData[searchdata].City+"<br>state:"+employeeData[searchdata].Location;
-document.getElementById("data").innerHTML=res;
-}​​
-
-
 
 
 function Oddemployee(){
